@@ -10,9 +10,12 @@ Tietojen etsintä:
 - eri kalalajien tietojen selaaminen
 - akvaarion tietojen syöttö (esim. laji- vai seura-akvaario, lämpötila, pH, tilavuus...) ja sen perusteella tapahtuva sopivien kalojen ehdottaminen
 - itseä miellyttävien kalojen valinta listalta
+
 ####**Ylläpitäjän toiminnot:**
+
 - kalalajin poisto
 - kalalajin tietojen päivittäminen
 - kalalajin lisääminen
+
 ####**Muuta huomioitavaa aiheesta:**
 Akvaarioharrastajilla on jo aktiivinen keskustelupalsta [Aqua-Web](http://aqua-web.fi/), joten tähän ohjelmaan ei rakenneta keskustelu- tai arvosteluominaisuuksia. Tämä ohjelma rakennetaan puhtaasti auttamaan uusia harrastajia sopivien kalojen löytämiseen.
