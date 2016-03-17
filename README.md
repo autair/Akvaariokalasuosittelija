@@ -1,4 +1,2 @@
 # Akvaariokalasuosittelija
-Tanne tulee kaloja
-Tassa on toinenkin muokkaus
-Ja tassa on mokoma kolmaskin muokkaus
+Ohjelma sopivien akvaariokalojen löytämiseksi harrastajien akvaarioihin.
