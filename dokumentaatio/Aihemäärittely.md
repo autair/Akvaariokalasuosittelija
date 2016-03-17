@@ -4,12 +4,14 @@ Akvaariokalasuosittelija. Tarkoituksena on tuottaa ohjelma, joka suosittelee kä
 Akvaariokaloilla on yleisestä harhaluulosta huolimatta erilaisia vesiarvoihin, ruokintaan, seuralaisiin ja akvaarion kokoon liittyviä vaatimuksia. Aivan kuten pieniä villakoiria ei voi käyttää vetokoirina, eivät myöskään kaikki kalat sovi kaikkiin akvaarioihin tai keskenään yhteen. Ohjelman pohjana käytetään tietokantaa, johon on kerätty tietoa eri kalalajeista.
 Tämä ohjelma suunnitellaan vain makeanveden seura- ja lajiakvaarioita silmälläpitäen. 
 ####**Käyttäjät:**
-Kuka tahansa voi etsiä ohjelmalla tietoja, mutta uusien tietojen lisääminen vaatii ylläpitäjän kirjautumisen.
+Tavallinen käyttäjä, ylläpitäjä.
 ####**Kaikkien käyttäjien toiminnot:**
 Tietojen etsintä:
 - eri kalalajien tietojen selaaminen
 - akvaarion tietojen syöttö (esim. laji- vai seura-akvaario, lämpötila, pH, tilavuus...) ja sen perusteella tapahtuva sopivien kalojen ehdottaminen
 - itseä miellyttävien kalojen valinta listalta
+
+Järjestelmään kirjautuminen.
 
 ####**Ylläpitäjän toiminnot:**
 
