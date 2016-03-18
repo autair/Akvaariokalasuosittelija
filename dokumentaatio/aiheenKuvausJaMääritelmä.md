@@ -23,4 +23,4 @@ Järjestelmään kirjautuminen.
 Akvaarioharrastajilla on jo aktiivinen keskustelupalsta [Aqua-Web](http://aqua-web.fi/), joten tähän ohjelmaan ei rakenneta keskustelu- tai arvosteluominaisuuksia. Tämä ohjelma rakennetaan puhtaasti auttamaan uusia harrastajia sopivien kalojen löytämiseen.
 
 ####**Määrittelyvaiheen luokkakaavio:**
-![Luokkakaavio](/home/autair/Desktop/luokkakaavio.png)
+![Luokkakaavio](/home/autair/Desktop/luokkakaavio2.jpg)
