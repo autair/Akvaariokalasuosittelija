@@ -4,21 +4,20 @@
  * and open the template in the editor.
  */
 package akvaariokalasuosittelija.akvaariokalaprojekti;
-import java.util.ArrayList;
+
 /**
  *
  * @author autair
  */
-public class FishReferee {
+public class Main {
 
-    private Aquarium a;
-    private ArrayList<Fish> list;
-
-    public FishReferee(Aquarium a) {
-        this.a = a;
-        this.list = new ArrayList<>();
-        
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        UI ui = new UI();
+        ui.start();
     }
-
-
+    
 }

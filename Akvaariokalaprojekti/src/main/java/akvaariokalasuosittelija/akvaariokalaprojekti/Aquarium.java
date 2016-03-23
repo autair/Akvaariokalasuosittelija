@@ -5,10 +5,64 @@
  */
 package akvaariokalasuosittelija.akvaariokalaprojekti;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author autair
  */
 public class Aquarium {
-    
+
+    private int volume;
+    private float pH;
+    public ArrayList<Fish> fishListTop;
+    public ArrayList<Fish> fishListMid;
+    public ArrayList<Fish> fishListBottom;
+    private boolean topFull;
+    private boolean midFull;
+    private boolean bottomFull;
+
+    public Aquarium(int volume, float pH) {
+        this.volume = 0;
+        this.pH = 0;
+        this.fishListMid = new ArrayList<>();
+        this.fishListTop = new ArrayList<>();
+        this.fishListBottom = new ArrayList<>();
+        this.bottomFull = false;
+        this.topFull = false;
+        this.midFull = false;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public void setpH(float pH) {
+        this.pH = pH;
+    }
+
+    public int getVolume() {
+        return this.volume;
+    }
+
+    public boolean isTopFull() {
+        return this.topFull;
+    }
+    public boolean isMidFull() {
+        return this.midFull;
+    }
+    public boolean isBottomFull() {
+        return this.bottomFull;
+    }
+    public void setTopStatus(boolean value) {
+        this.topFull = value;
+    }
+    public void setMidStatus(boolean value) {
+        this.midFull = value;
+    }
+    public void setBottomStatus(boolean value) {
+        this.bottomFull = value;
+    }
+   
+   
 }
