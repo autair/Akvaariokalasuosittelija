@@ -36,7 +36,7 @@ public class Library {
         
         return null;
     }
-    public void printFish(int volume, float pH) { //tassa taytyy tarkistaa fishrefereen jo listalla olevat kalat ja katsoa sopiiko pH!
+    public void printFish(int volume) { //tassa taytyy tarkistaa fishrefereen jo listalla olevat kalat ja katsoa sopiiko pH!
         for (Species s : this.list) {
             if (s.getaqMinSize() < volume)
             System.out.println(s.getName() + "\n");

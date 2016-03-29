@@ -5,4 +5,4 @@ Päivä | Tunnit | Kuvaus
 18.03.2016 | 2,5h | Määrittelyvaiheen luokkakaavion piirto, ohjelman toteuttamisen pohdintaa.
 21.03.2016 | 3,5h | Ensimmäisten luokkien rakentelu NetBeansissa.
 23.03.2016 | 2,5h | Lisää luokkia rakennettu.
-
+29.03.2016 | 2h | Testien rakentelua, lisää toteuttamisen pohdintaa

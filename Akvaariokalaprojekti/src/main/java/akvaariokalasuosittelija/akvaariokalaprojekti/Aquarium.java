@@ -22,9 +22,8 @@ public class Aquarium {
     private boolean midFull;
     private boolean bottomFull;
 
-    public Aquarium(int volume, float pH) {
-        this.volume = 0;
-        this.pH = 0;
+    public Aquarium(int volume) {
+        this.volume = volume;
         this.fishListMid = new ArrayList<>();
         this.fishListTop = new ArrayList<>();
         this.fishListBottom = new ArrayList<>();
@@ -33,13 +32,6 @@ public class Aquarium {
         this.midFull = false;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public void setpH(float pH) {
-        this.pH = pH;
-    }
 
     public int getVolume() {
         return this.volume;
