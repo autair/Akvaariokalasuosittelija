@@ -19,7 +19,7 @@ public class UI {
         
         //Library lib = new Library();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Akvaarion koko: ");
+        System.out.print("Akvaarion koko: ");
         int volume = scanner.nextInt();
         Aquarium a = new Aquarium(volume);
         FishReferee f = new FishReferee(a);
