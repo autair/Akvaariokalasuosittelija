@@ -6,3 +6,4 @@ Päivä | Tunnit | Kuvaus
 21.03.2016 | 3,5h | Ensimmäisten luokkien rakentelu NetBeansissa.
 23.03.2016 | 2,5h | Lisää luokkia rakennettu.
 29.03.2016 | 2h | Testien rakentelua, lisää toteuttamisen pohdintaa
+30.03.2016 | 2,5h | NetBeansin ongelmien selvittely, käytettävän lajitietokannan (tekstitiedoston) kirjoittamista.
