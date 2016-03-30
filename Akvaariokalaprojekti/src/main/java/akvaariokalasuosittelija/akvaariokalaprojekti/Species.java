@@ -18,6 +18,9 @@ public class Species {
     private int aqMinSize;
     private double pHmin;
     private double pHmax;
+    private int tempMin;
+    private int tempMax;
+    
     
     public Species(String name, String latin_name, int lenght, boolean isSocial, String floor, int aqMinSize, double pHmin, double pHmax) {
         this.name = "seeprakala";
@@ -28,6 +31,7 @@ public class Species {
         this.aqMinSize = 70;
         this.pHmin = 6.5;
         this.pHmax = 7.0;
+        
         
     }
     public String getName() {
