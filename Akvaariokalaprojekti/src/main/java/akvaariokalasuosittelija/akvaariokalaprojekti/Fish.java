@@ -9,12 +9,13 @@ package akvaariokalasuosittelija.akvaariokalaprojekti;
  *
  * @author autair
  */
-public class Fish extends Species {
+public class Fish {
     private Aquarium aquarium;
     private int amount;
+    private Species s;
     
-    public Fish(Aquarium a, int amount, String name, String latin_name, boolean isSocial, int lenght, String floor, int aqMinSize, double pHmin, double pHmax) {
-        super(name, latin_name, lenght, isSocial, floor, aqMinSize, pHmin, pHmax);
+    public Fish(Aquarium a, Species s) {
+        this.s = s;
         this.aquarium = a;
         this.amount = amount;
     }
@@ -26,6 +27,9 @@ public class Fish extends Species {
     }
     public int getAmount() {
         return this.amount;
+    }
+    public Species getSpecies() {
+        return this.s;
     }
     
     

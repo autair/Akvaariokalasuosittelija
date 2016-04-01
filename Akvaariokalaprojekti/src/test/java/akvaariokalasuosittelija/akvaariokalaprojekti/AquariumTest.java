@@ -15,14 +15,13 @@ import static org.junit.Assert.*;
  */
 public class AquariumTest {
 
-    public AquariumTest() {
-    }
+    
 
     Aquarium a;
 
     @Before
     public void setUp() {
-        Aquarium a = new Aquarium(100);
+        a = new Aquarium(100);
     }
 
     @Test

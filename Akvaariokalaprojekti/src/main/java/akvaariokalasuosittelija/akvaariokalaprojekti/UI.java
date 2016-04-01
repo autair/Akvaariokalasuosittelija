@@ -22,9 +22,15 @@ public class UI {
         System.out.print("Akvaarion koko: ");
         int volume = scanner.nextInt();
         Aquarium a = new Aquarium(volume);
-        FishReferee f = new FishReferee(a);
-        System.out.println("Valitse listalta kala, jonka ehdottomasti haluat akvaarioosi. Kirjoita se tekstikenttään.");
-        lib.printFishlist();
+        lib.generateFirstFishlist(volume);
+        System.out.println("Valitse listalta 1 mieluinen kala: ");
+        lib.printAllList();
+        System.out.println("Halusit nyt tuon ensimmäisen");
+        Species first = (Species)lib.getCurrentList().get(1);
+        lib.upDateFishList(first);
+        lib.printCurrentList();
+        
+        
         
     }
     

@@ -22,7 +22,7 @@ public class SpeciesTest {
 
     @Before
     public void setUp() {
-        s = new Species("seeprakala", "Danio rerio", 5, true, "mid", 70, 6.5, 7.0);
+        s = new Species("seeprakala", "Danio rerio", 5, true, "mid", 70, 6.5, 7.0, 20, 28);
     }
 
     @Test

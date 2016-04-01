@@ -24,12 +24,12 @@ public class Aquarium {
 
     public Aquarium(int volume) {
         this.volume = volume;
-//        this.fishListMid = new ArrayList<>();
-//        this.fishListTop = new ArrayList<>();
-//        this.fishListBottom = new ArrayList<>();
-//        this.bottomFull = false;
-//        this.topFull = false;
-//        this.midFull = false;
+        this.fishListMid = new ArrayList<>();
+        this.fishListTop = new ArrayList<>();
+        this.fishListBottom = new ArrayList<>();
+        this.bottomFull = false;
+        this.topFull = false;
+        this.midFull = false;
     }
 
 
