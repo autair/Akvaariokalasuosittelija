@@ -17,20 +17,15 @@ public class UI {
     public void start() {
         
         
-        //Library lib = new Library();
+        Library lib = new Library();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Akvaarion koko: ");
         int volume = scanner.nextInt();
         Aquarium a = new Aquarium(volume);
         FishReferee f = new FishReferee(a);
         System.out.println("Valitse listalta kala, jonka ehdottomasti haluat akvaarioosi. Kirjoita se tekstikenttään.");
+        lib.printFishlist();
         
-//        lib.printFish(volume);
-//        String seepra = scanner.nextLine();
-//        if (lib.isSpeciesInLibrary(seepra) == true) {
-//            Species x = lib.returnSpecies(seepra);
-//            
-//        }
     }
     
 }

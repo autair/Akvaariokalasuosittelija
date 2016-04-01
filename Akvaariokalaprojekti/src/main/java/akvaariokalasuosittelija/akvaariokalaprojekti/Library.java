@@ -4,43 +4,44 @@
  * and open the template in the editor.
  */
 package akvaariokalasuosittelija.akvaariokalaprojekti;
-import java.util.ArrayList;
+
+import java.io.File;
+import java.util.Scanner;
+
 /**
  *
  * @author autair
  */
 public class Library {
-    private ArrayList<Species> list;
-    
+
+    private File fishlist;
+    private Scanner scanner;
+
     public Library() {
-        this.list = new ArrayList<>();
-        Species danio = new Species("Seeprakala", "Danio Rerio", 5, true, "mid", 70, 6.5, 7.0);
-        this.list.add(danio);
+//        
     }
-    public boolean isSpeciesInLibrary(String name) {
-        for (Species s : this.list) {
-            if (s.getName().equals(name)) {
-                return true;
-            }
-            
-        }
-        return false;
-    }
-    public Species returnSpecies(String name) {
-        for (Species s : this.list) {
-            if (s.getName().equals(name)) {
-                return s;
-            }
-            
+    
+   
+
+    public void printFishlist() {
+        
+        File fishlist = new File("fishlist.txt");
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(fishlist);
+        } catch (Exception e) {
+            System.out.println("Kirjaston lukeminen epäonnistui. Virhe: " + e.getMessage());
+            return; // poistutaan metodista
         }
         
-        return null;
-    }
-    public void printFish(int volume) { //tassa taytyy tarkistaa fishrefereen jo listalla olevat kalat ja katsoa sopiiko pH!
-        for (Species s : this.list) {
-            if (s.getaqMinSize() < volume)
-            System.out.println(s.getName() + "\n");
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            
+            System.out.println(line);
         }
+
+        scanner.close();
     }
+
     
 }
