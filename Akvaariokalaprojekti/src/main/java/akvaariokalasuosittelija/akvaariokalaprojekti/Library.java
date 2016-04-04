@@ -116,6 +116,10 @@ public class Library {
             }
 
         }
+        if (this.list.isEmpty()) {
+            System.out.println("Näin pieneen akvaarioon ei voi laittaa kaloja.");
+            return null;
+        }
 
         scanner.close();
 
@@ -123,39 +127,6 @@ public class Library {
 //            System.out.println(s.getName());
 //        }
         return this.list;
-    }
-
-    public ArrayList upDateFishList(Species s) {
-        Iterator<Species> i = this.list.iterator();
-
-        while (i.hasNext()) {
-            Species x = i.next();
-
-            if (x.getTempMin() > s.getTempMax()) {
-                i.remove();
-            }
-            if (x.getaqMinSize() > this.aqSize) {
-                i.remove();
-            }
-            if (x.getMinpH() > s.getMaxpH()) {
-                i.remove();
-            }
-            if (x.getMaxpH() < s.getMinpH()) {
-                i.remove();
-            }
-            if (x.getTempMax() < s.getTempMin()) {
-                i.remove();
-            }
-            
-        }
-
-        return this.list;
-    }
-
-    public void printCurrentList() {
-        for (Species s : this.list) {
-            System.out.println(s.getName());
-        }
     }
 
     public void printAllList() {

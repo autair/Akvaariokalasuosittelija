@@ -4,34 +4,33 @@
  * and open the template in the editor.
  */
 package akvaariokalasuosittelija.akvaariokalaprojekti;
+
 import java.util.Scanner;
+
 /**
  *
  * @author autair
  */
 public class UI {
-    
+
     public UI() {
     }
-    
+
     public void start() {
-        
-        
+
         Library lib = new Library();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Akvaarion koko: ");
         int volume = scanner.nextInt();
         Aquarium a = new Aquarium(volume);
-        lib.generateFirstFishlist(volume);
-        System.out.println("Valitse listalta 1 mieluinen kala: ");
-        lib.printAllList();
-        System.out.println("Halusit nyt tuon ensimmäisen");
-        Species first = (Species)lib.getCurrentList().get(1);
-        lib.upDateFishList(first);
-        lib.printCurrentList();
+        FishReferee f = new FishReferee(lib.generateFirstFishlist(volume), a);
+        f.printCurrentList();
+        f.countTopFish((Species)f.getList().get(1));
         
         
-        
+       
+
+
     }
-    
+
 }

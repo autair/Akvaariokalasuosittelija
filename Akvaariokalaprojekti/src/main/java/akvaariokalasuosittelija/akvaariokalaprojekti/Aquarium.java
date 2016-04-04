@@ -36,6 +36,9 @@ public class Aquarium {
     public int getVolume() {
         return this.volume;
     }
+    public ArrayList getTopList() {
+        return this.fishListTop;
+    }
 
     public boolean isTopFull() {
         return this.topFull;

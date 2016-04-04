@@ -6,10 +6,7 @@
 
 package akvaariokalasuosittelija.akvaariokalaprojekti;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -20,12 +17,11 @@ import static org.junit.Assert.*;
 public class LibraryTest {
     
     Library l;
-    Species notPossible;
+    
     
     @Before
     public void setUp() {
         l = new Library();
-        notPossible = new Species("notReal", "latinnotReal", 5, true, "mid", 60, 7.5, 8.0, 15, 30);
     }
     
     @Test
@@ -46,12 +42,7 @@ public class LibraryTest {
         l.generateFirstFishlist(aqMinSize);
         assertEquals(1, l.getSpeciesCount());
     }
-//    @Test
-//    public void onlySuitableSpeciesRecommended() {
-//        l.generateFirstFishlist(70);
-//        l.upDateFishList(notPossible); //IllegalStateException, korjaa tama
-//        assertEquals(1,l.getCurrentList().size());
-//    }
+  
     
     
     
