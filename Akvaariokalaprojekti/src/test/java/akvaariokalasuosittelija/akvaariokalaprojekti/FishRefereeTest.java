@@ -6,11 +6,8 @@
 package akvaariokalasuosittelija.akvaariokalaprojekti;
 
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -23,6 +20,7 @@ public class FishRefereeTest {
     Species fake1;
     Aquarium a;
     ArrayList list;
+    ArrayList toplist;
     Species fake2;
     Species fake3;
     Species fake4;
@@ -32,9 +30,9 @@ public class FishRefereeTest {
     public void setUp() {
         fake1 = new Species("fake1", "latinFake1", 5, true, "mid", 60, 7.5, 8.0, 15, 30);
         fake2 = new Species("fake2", "latinFake2", 5, true, "mid", 60, 6.5, 7.1, 15, 30);
-        fake3 = new Species("fake3", "latinFake3", 5, true, "mid", 60, 7.5, 8.0, 21, 30);
+        fake3 = new Species("fake3", "latinFake3", 5, false, "top", 60, 7.5, 8.0, 21, 30);
         fake4 = new Species("fake4", "latinFake4", 5, true, "mid", 60, 7.0, 8.0, 15, 20);
-        fake5 = new Species("fake5", "latinFake5", 5, true, "mid", 60, 6.5, 7.0, 15, 30);
+        fake5 = new Species("fake5", "latinFake5", 5, true, "bottom", 60, 6.5, 7.0, 15, 30);
         a = new Aquarium(100);
         list = new ArrayList<Species>();
         list.add(fake1);
@@ -42,15 +40,33 @@ public class FishRefereeTest {
         list.add(fake3);
         list.add(fake4);
         list.add(fake5);
-        f = new FishReferee(list,a);
+        toplist = new ArrayList<Species>();
+        f = new FishReferee(list, a);
     }
 
     @Test
-    public void onlySuitableSpeciesRecommended() {
+    public void fishListIsUpdated() {
         f.upDateFishList(fake5);
-        assertEquals(3, f.getSpeciesCount());
+        assertEquals(2, f.getSpeciesCount());
     }
 
+    @Test
+    public void topListIsFormedCorrectly() {
+        f.makeTopFishList();
+        assertEquals(1, f.getTopList().size());
+    }
+
+    @Test
+    public void bottomListIsFormedCorrectly() {
+        f.makeBottomFishList();
+        assertEquals(0, f.getTopList().size());
+    }
+
+    @Test
+    public void midListIsFormedCorrectly() {
+        f.makeMidFishList();
+        assertEquals(0, f.getTopList().size());
+    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

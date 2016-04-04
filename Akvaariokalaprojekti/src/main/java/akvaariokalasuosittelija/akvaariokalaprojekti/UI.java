@@ -6,6 +6,7 @@
 package akvaariokalasuosittelija.akvaariokalaprojekti;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -24,9 +25,15 @@ public class UI {
         int volume = scanner.nextInt();
         Aquarium a = new Aquarium(volume);
         FishReferee f = new FishReferee(lib.generateFirstFishlist(volume), a);
-        f.printCurrentList();
-        f.countTopFish((Species)f.getList().get(1));
+        f.update();
+        f.setSpeciesCount();
         
+        
+//        f.printMidList();
+//        System.out.println("Valitse listalta keskiveden kalalaji: ");
+//        f.upDateFishList((Species)f.getMidList().get(2));
+//        f.update();
+//        f.printMidList();
         
        
 
