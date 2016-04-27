@@ -29,40 +29,4 @@ public class AquariumTest {
         assertEquals(100, a.getVolume());
     }
 
-    @Test
-    public void returnsCorrectTopStatus1() {
-        assertEquals(false, a.isTopFull());
-    }
-
-    @Test
-    public void returnsCorrectTopStatus2() {
-        a.setTopStatus(true);
-        assertEquals(true, a.isTopFull());
-    }
-
-    @Test
-    public void returnsCorrectMidStatus1() {
-        assertEquals(false, a.isMidFull());
-    }
-
-    @Test
-    public void returnsCorrectMidStatus2() {
-        a.setMidStatus(true);
-        assertEquals(true, a.isMidFull());
-    }
-
-    @Test
-    public void returnsCorrectBottomStatus1() {
-        
-        
-        
-        assertEquals(false, a.isBottomFull());
-    }
-
-    @Test
-    public void returnsCorrectBottomStatus2() {
-        a.setBottomStatus(true);
-        assertEquals(true, a.isBottomFull());
-    }
-
 }

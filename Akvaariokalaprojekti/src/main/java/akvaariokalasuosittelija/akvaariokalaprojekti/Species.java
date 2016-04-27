@@ -21,11 +21,7 @@ public class Species {
     private int tempMin;
     private int tempMax;
 
-   
-    
-    
-    
-    
+
     public Species(String name, String latin_name, int lenght, boolean isSocial, String floor, int aqMinSize, double pHmin, double pHmax, int tempMin, int tempMax) {
         this.name = name;
         this.latin_name = latin_name;

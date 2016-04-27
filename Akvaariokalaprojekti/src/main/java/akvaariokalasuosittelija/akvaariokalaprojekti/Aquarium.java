@@ -15,49 +15,15 @@ public class Aquarium {
 
     private int volume;
     private float pH;
-    public ArrayList<Fish> fishListTop;
-    public ArrayList<Fish> fishListMid;
-    public ArrayList<Fish> fishListBottom;
-    private boolean topFull;
-    private boolean midFull;
-    private boolean bottomFull;
+
 
     public Aquarium(int volume) {
         this.volume = volume;
-        this.fishListMid = new ArrayList<>();
-        this.fishListTop = new ArrayList<>();
-        this.fishListBottom = new ArrayList<>();
-        this.bottomFull = false;
-        this.topFull = false;
-        this.midFull = false;
     }
 
 
     public int getVolume() {
         return this.volume;
     }
-    public ArrayList getTopList() {
-        return this.fishListTop;
-    }
-
-    public boolean isTopFull() {
-        return this.topFull;
-    }
-    public boolean isMidFull() {
-        return this.midFull;
-    }
-    public boolean isBottomFull() {
-        return this.bottomFull;
-    }
-    public void setTopStatus(boolean value) {
-        this.topFull = value;
-    }
-    public void setMidStatus(boolean value) {
-        this.midFull = value;
-    }
-    public void setBottomStatus(boolean value) {
-        this.bottomFull = value;
-    }
-   
    
 }

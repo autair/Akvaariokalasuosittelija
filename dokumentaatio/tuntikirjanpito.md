@@ -9,4 +9,5 @@ Päivä | Tunnit | Kuvaus
 30.03.2016 | 2,5h | NetBeansin ongelmien selvittely, käytettävän lajitietokannan (tekstitiedoston) kirjoittamista.
 01.04.2016 | 5h | Testien rakentelua, ohjelmalogiikkaa
 04.04.2016 | 5h | Lisää koodia, ohjelmalogiikan pohdintaa
-
+06.04.2016 | 4h | FishRefereen toiminnan tarkempi suunnittelu ja toteutus, uusi luokkakaavio, koodikatselmointi
+07.04.2016 | 5h | Lisää koodia

@@ -15,11 +15,11 @@ public class Fish {
     private Species s;
     private int lengthOfAll;
     
-    public Fish(Aquarium a, Species s) {
+    public Fish(Aquarium a, Species s, int amount) {
         this.s = s;
         this.aquarium = a;
         this.amount = amount;
-        this.lengthOfAll = 0;
+        this.lengthOfAll = this.s.getLenght()*this.amount;
     }
     public Aquarium a() {
         return this.aquarium;
@@ -33,9 +33,7 @@ public class Fish {
     public Species getSpecies() {
         return this.s;
     }
-    public void setLengthOfAll() {
-        this.lengthOfAll = this.s.getLenght()*this.amount;
-    }
+    
     public int getLengthOfAll() {
         return this.lengthOfAll;
     }

@@ -23,10 +23,25 @@ public class UI {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Akvaarion koko: ");
         int volume = scanner.nextInt();
+        if (volume < 40) {
+            System.out.println("Akvaarion pitää olla vähintään 40 litraa.");
+            System.out.print("Akvaarion koko: ");
+            volume = scanner.nextInt();
+        }
         Aquarium a = new Aquarium(volume);
+        
         FishReferee f = new FishReferee(lib.generateFirstFishlist(volume), a);
-        f.update();
+        f.firstLists();
+        
         f.setSpeciesCount();
+        
+        f.printCurrentLists();
+        //allaolevaa toistetaan, kunnes lajeja ei enää ole tarjolla tai käyttäjä siirtyy eteenpäin
+        System.out.println("Kirjoita mieleinen laji: ");
+        String toive = scanner.nextLine();
+        f.findSpecies(toive);
+        f.update();
+        f.printCurrentLists();
         
         
 //        f.printMidList();

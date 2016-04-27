@@ -17,10 +17,9 @@ import org.junit.Test;
 public class FishRefereeTest {
 
     FishReferee f;
-    Species fake1;
     Aquarium a;
     ArrayList list;
-    ArrayList toplist;
+    Species fake1;
     Species fake2;
     Species fake3;
     Species fake4;
@@ -34,19 +33,24 @@ public class FishRefereeTest {
         fake4 = new Species("fake4", "latinFake4", 5, true, "mid", 60, 7.0, 8.0, 15, 20);
         fake5 = new Species("fake5", "latinFake5", 5, true, "bottom", 60, 6.5, 7.0, 15, 30);
         a = new Aquarium(100);
-        list = new ArrayList<Species>();
+        this.list = new ArrayList<Species>();
         list.add(fake1);
         list.add(fake2);
         list.add(fake3);
         list.add(fake4);
         list.add(fake5);
-        toplist = new ArrayList<Species>();
         f = new FishReferee(list, a);
+    }
+    
+    @Test
+    public void firstListIsFormed() {
+        f.firstLists();
+        assertEquals(1, f.getBottomList().size());
     }
 
     @Test
     public void fishListIsUpdated() {
-        f.upDateFishList(fake5);
+        f.updateAllSpeciesList(fake5);
         assertEquals(2, f.getSpeciesCount());
     }
 
@@ -59,13 +63,25 @@ public class FishRefereeTest {
     @Test
     public void bottomListIsFormedCorrectly() {
         f.makeBottomFishList();
-        assertEquals(0, f.getTopList().size());
+        assertEquals(1, f.getBottomList().size());
     }
 
     @Test
     public void midListIsFormedCorrectly() {
         f.makeMidFishList();
-        assertEquals(0, f.getTopList().size());
+        assertEquals(3, f.getMidList().size());
+    }
+    @Test
+    public void speciesNotInListCannotBeFound() {
+        String goldfish = "goldfish";
+        f.findSpecies(goldfish);
+        assertEquals(5,list.size() );
+    }
+    @Test
+    public void speciesInListCanBeFound() {
+        String fake1 = "fake1";
+        f.findSpecies(fake1);
+        assertEquals(2, list.size());
     }
 
     // TODO add test methods here.
